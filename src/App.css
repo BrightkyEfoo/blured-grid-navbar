@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+}
+.container {
+  background: #000;
+  color: white;
+}
+.body > div {
+  height: 300px;
+  width: 700px;
+}
+
+.body {
+  flex-direction: column;
+  gap: 30px;
+  
+  display: flex;
+  align-items: center;
+  div{
+     font-size: 25px;
+     border-radius: 25px;
+     padding: 25px;
+  }
+}
+
+.body > div:nth-child(4n) {
+  background-color: yellow;
+}
+
+.body > div:nth-child(4n+1) {
+  background-color: cyan;
+  color: black;
+}
+
+.body > div:nth-child(4n+2) {
+  background-color: chocolate;
+  color: black;
+}
+
+
+.nav-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-container {
+  transition: all ease 300ms;
+}
+
+.navbar-content {
+  z-index: 2;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 8px 15px;
+  align-items: center;
+  .logo {
+    text-transform: uppercase;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all ease 300ms;
+  }
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    li {
+      border-bottom: 2px transparent solid;
+      cursor: pointer;
+    }
+    li:hover {
+      border-bottom: 2px black solid;
+      transition: all ease 300ms;
+    }
+  }
+}
+
+.background-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mask-subcontainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mask-image: url("#grid-mask");
+  mask-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
+}
+
+.blur-filter {
+  background-color: rgba(0, 0, 0, 0.082);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
